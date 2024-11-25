@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+        </div>
+
+        <!-- Step 4: Skills -->
+        <div class="step active">
+            <h2>Step 4: Skills</h2>
+
+            <label for="skills">List your skills:</label>
+            <textarea name="skills" id="skills" required></textarea><br>
+
+            <button type="button" onclick="prevStep(this.parentElement)">Back</button>
+            <button type="button" onclick="nextStep(this.parentElement)">Next</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

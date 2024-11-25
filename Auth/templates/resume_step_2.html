@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Step 2: Upload Photo -->
+        <div class="step active">
+            <h2>Step 2: Upload Photo</h2>
+
+            <label for="photo" class="custom-file-upload">
+                Browse for Photo
+            </label>
+            <input type="file" name="photo" id="photo" accept="image/*" required><br>
+
+            <button type="button" onclick="prevStep(this.parentElement)">Back</button>
+            <button type="button" onclick="nextStep(this.parentElement)">Next</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

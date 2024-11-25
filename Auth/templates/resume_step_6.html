@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+        </div>
+
+        <!-- Step 6: Work Experience -->
+        <div class="step active">
+            <h2>Step 6: Work Experience</h2>
+
+            <label for="work_experience">Work Experience:</label>
+            <textarea name="work_experience" id="work_experience" required></textarea><br>
+
+            <button type="button" onclick="prevStep(this.parentElement)">Back</button>
+            <button type="button" onclick="nextStep(this.parentElement)">Next</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

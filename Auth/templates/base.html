@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume Builder</title>
+    
+    <!-- Include your CSS files here -->
+    <link rel="stylesheet" href="{% static 'css/resumestyle.css' %}">
+    
+    <!-- Include your JS files here -->
+    <script src="{% static 'js/resume.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/resume/step-1/">Create Resume</a></li>
+                <li><a href="/auth/login/">Login</a></li>
+                <li><a href="/auth/register/">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content block will be filled by other templates -->
+    <div class="main-content">
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Resume Builder. All rights reserved.</p>
+    </footer>
+</body>
+</html>

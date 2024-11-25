@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2>Review Your Resume</h2>
+    <p><strong>First Name:</strong> {{ form.first_name.value }}</p>
+    <p><strong>Last Name:</strong> {{ form.last_name.value }}</p>
+    <p><strong>Phone Number:</strong> {{ form.phone_number.value }}</p>
+    <p><strong>Email Address:</strong> {{ form.email.value }}</p>
+    <p><strong>Address:</strong> {{ form.address.value }}</p>
+    <p><strong>LinkedIn Profile:</strong> {{ form.linkedin.value }}</p>
+    <p><strong>Personal Website:</strong> {{ form.website.value }}</p>
+    <p><strong>Skills:</strong> {{ form.skills.value }}</p>
+    <p><strong>Languages Known:</strong> {{ form.languages.value }}</p>
+    <p><strong>Work Experience:</strong> {{ form.work_experience.value }}</p>
+    <p><strong>Education:</strong> {{ form.education.value }}</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Submit Resume</button>
+        <button type="button" onclick="window.history.back();">Back to Edit</button>
+    </form>
+</div>
+{% endblock %}

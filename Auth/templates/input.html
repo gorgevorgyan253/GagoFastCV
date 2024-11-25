@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Input Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="resume-form">
+            <!-- Step 1: Name -->
+            <div class="form-step active" id="step-1">
+                <h2>Step 1: Enter Your Name</h2>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <button type="button" class="next-button">Next</button>
+            </div>
+
+            <!-- Step 2: Photo -->
+            <div class="form-step" id="step-2">
+                <h2>Step 2: Upload Your Photo</h2>
+                <input type="file" name="photo" id="photo" accept="image/*" required>
+                <button type="button" class="prev-button">Previous</button>
+                <button type="button" class="next-button">Next</button>
+            </div>
+
+            <!-- Step 3: Email -->
+            <div class="form-step" id="step-3">
+                <h2>Step 3: Enter Your Email</h2>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <button type="button" class="prev-button">Previous</button>
+                <button type="button" class="next-button">Next</button>
+            </div>
+
+            <!-- Final Step: Submit -->
+            <div class="form-step" id="step-4">
+                <h2>Step 4: Review & Submit</h2>
+                <p>Please review your details and click submit to finish.</p>
+                <button type="button" class="prev-button">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
